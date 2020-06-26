@@ -123,7 +123,7 @@ header {
     align-items: center;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 700px) and (orientation: landscape) {
     #current-game {
         flex-direction: row;
     }
@@ -139,7 +139,7 @@ header {
     max-width: 600px;
     width: 100%;
     max-height: 100%;
-    max-height: 100%;
+    height: 50vh;
     object-fit: contain;
 }
 
@@ -175,11 +175,11 @@ header {
 /** KEYBOARD **/
 
 #keyboard-container {
-    opacity: 0;
+    display: none
 }
 
 #keyboard-container.visible {
-    opacity: 1;
+    display: block;
 }
 
 #keyboard-switch {
