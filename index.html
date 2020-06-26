@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forca JS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1 id="title">Forca JS</h1>
+            <a href="#" id="new-game">New game</a>
+
+            <section id="theme-selector" class="alert">
+                <h2>Select a theme:</h2>
+                <div id="theme-lists">
+                    <div class="theme-column">
+                        <h3>Português</h3>
+                        <div class="theme-list">
+                            <a href="#" class="theme" data-theme="listaFrutas">Frutas</a>
+                            <a href="#" class="theme" data-theme="listaAnimais">Animais</a>
+                            <a href="#" class="theme" data-theme="listaCores">Cores</a>
+                            <a href="#" class="theme" data-theme="listaEsportes">Esportes</a>
+                        </div>
+                    </div>
+                    <div class="theme-column">
+                        <h3>English</h3>
+                        <div class="theme-list">
+                            <a href="#" class="theme" data-theme="listFruits">Fruits</a>
+                            <a href="#" class="theme" data-theme="listAnimals">Animals</a>
+                            <a href="#" class="theme" data-theme="listColors">Colors</a>
+                            <a href="#" class="theme" data-theme="listSports">Sports</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </header>
+    
+        <section id="game">
+            <div id="current-game">
+                <div id="hangman-image">
+                    <img src="forca-0.png">
+                </div>
+    
+                <div id="current-theme"></div>
+    
+                <div id="current-word">
+                    
+                </div>
+            </div>
+        
+            <div id="keyboard-container">
+                <div id="keyboard-switch">
+                    <a href="#">QWERTY</a>
+                    <a href="#" class="active">ABC</a>
+                </div>
+                <div id="keyboard">
+                    <a id="a" href="#" class="key">A</a>
+                    <a id="b" href="#" class="key">B</a>
+                    <a id="c" href="#" class="key">C</a>
+                    <a id="d" href="#" class="key">D</a>
+                    <a id="e" href="#" class="key">E</a>
+                    <a id="f" href="#" class="key">F</a>
+                    <a id="g" href="#" class="key">G</a>
+                    <a id="h" href="#" class="key">H</a>
+                    <a id="i" href="#" class="key">I</a>
+                    <a id="j" href="#" class="key">J</a>
+                    <span class="key-break"></span>
+                    <a id="k" href="#" class="key">K</a>
+                    <a id="l" href="#" class="key">L</a>
+                    <a id="m" href="#" class="key">M</a>
+                    <a id="n" href="#" class="key">N</a>
+                    <a id="o" href="#" class="key">O</a>
+                    <a id="p" href="#" class="key">P</a>
+                    <a id="q" href="#" class="key">Q</a>
+                    <a id="r" href="#" class="key">R</a>
+                    <a id="s" href="#" class="key">S</a>
+                    <span class="key-break"></span>
+                    <a id="t" href="#" class="key">T</a>
+                    <a id="u" href="#" class="key">U</a>
+                    <a id="v" href="#" class="key">V</a>
+                    <a id="w" href="#" class="key">W</a>
+                    <a id="x" href="#" class="key">X</a>
+                    <a id="y" href="#" class="key">Y</a>
+                    <a id="z" href="#" class="key">Z</a>
+                </div>
+            </div>
+
+            <div id="alert-box" class="alert visible">Click "New game" to start</div>
+
+        </section>
+        
+        <footer>
+            Criado por <a href="https://lucasfads.com.br" target="_blank">Lucas Fads</a>.
+        </footer>
+
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
