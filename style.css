@@ -23,9 +23,9 @@ a {
     margin: 0px auto;
     padding: 15px;
     max-width: 720px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 /** HEADER **/
@@ -73,6 +73,7 @@ header {
 /** THEME SELECTOR **/
 #theme-selector {
     top: calc(80px);
+    z-index: 2;
 }
 
 #theme-selector h2 {
@@ -103,7 +104,6 @@ header {
 
 /** GAME **/
 #game {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -116,14 +116,37 @@ header {
     align-items: center;
     margin-bottom: 40px;
 }
+
+#current-theme-and-word-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 700px) {
+    #current-game {
+        flex-direction: row;
+    }
+
+    #hangman-image {
+        width: 50%;
+    }
+}
+
+
+
 #hangman-image img {
     max-width: 600px;
     width: 100%;
+    max-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 #current-word {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .letter {
@@ -152,11 +175,11 @@ header {
 /** KEYBOARD **/
 
 #keyboard-container {
-    display: none;
+    opacity: 0;
 }
 
 #keyboard-container.visible {
-    display: block;
+    opacity: 1;
 }
 
 #keyboard-switch {
@@ -167,6 +190,7 @@ header {
     padding: 2px 20px;
     border: 2px solid var(--clickable);
     border-radius: 30px;
+    cursor: pointer;
 }
 
 #keyboard-switch .active {
@@ -184,7 +208,8 @@ header {
     width: 10%;
     text-align: center;
     font-size: 36px;
-    padding: 5px 10px;
+    padding: 5px 5px;
+    cursor: pointer;
 }
 
 .key.pressed {
